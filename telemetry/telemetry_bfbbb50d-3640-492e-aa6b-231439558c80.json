@@ -1,0 +1,51 @@
+{
+    "session_id": "bfbbb50d-3640-492e-aa6b-231439558c80",
+    "start_time": "2025-05-12T01:00:35.970687Z",
+    "user": {
+        "username": "FelipeFelix",
+        "hostname": "DESKTOP-1IVTM8K",
+        "ip_address": "192.168.0.10"
+    },
+    "environment": {
+        "os": "Windows-10-10.0.19045-SP0",
+        "python_version": "3.13.3",
+        "cwd": "C:\\Users\\FelipeFelix\\OneDrive - Housi\\Documentos\\PIM",
+        "terminal_size": {
+            "columns": 120,
+            "rows": 30
+        }
+    },
+    "args": [],
+    "env_vars": {
+        "LANG": null,
+        "TERM": null
+    },
+    "clicked_links": [
+        {
+            "url": "https://www.youtube.com/watch?v=8Mpc9ukltVA",
+            "timestamp": "2025-05-12T01:00:39.540469Z"
+        },
+        {
+            "url": "https://www.youtube.com/watch?v=8Mpc9ukltVA",
+            "timestamp": "2025-05-12T01:00:39.996991Z"
+        },
+        {
+            "url": "https://www.youtube.com/watch?v=8Mpc9ukltVA",
+            "timestamp": "2025-05-12T01:00:40.147320Z"
+        },
+        {
+            "url": "https://www.youtube.com/watch?v=8Mpc9ukltVA",
+            "timestamp": "2025-05-12T01:00:40.305826Z"
+        },
+        {
+            "url": "https://www.youtube.com/watch?v=rfscVS0vtbw",
+            "timestamp": "2025-05-12T01:00:43.223543Z"
+        },
+        {
+            "url": "https://www.youtube.com/watch?v=Vfo5le26IhY",
+            "timestamp": "2025-05-12T01:00:44.406899Z"
+        }
+    ],
+    "end_time": "2025-05-12T01:00:54.717604Z",
+    "duration_seconds": 18.746917
+}

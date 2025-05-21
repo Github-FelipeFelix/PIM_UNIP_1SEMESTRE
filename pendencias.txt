@@ -1,0 +1,3 @@
+Criar cartilhas digitais sobre cibersegurança e programação básica, para distribuição em escolas.
+O código deverá ser postado em algum repositório como o GITHUB por exemplo e estar acessível a comunidade
+Desenvolver infográficos sobre segurança digital para redes sociais da ONG parceira.
