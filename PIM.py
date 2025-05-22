@@ -414,10 +414,20 @@ def main():
                             print("Sem dados suficientes.")
                     elif opcao == '4':
                         dados = carregar_dados()
-                        nomes = [descriptografar(d['nome']) for d in dados]
-                        idades = {nomes[i]: d['idade'] for i, d in enumerate(dados) if 'idade' in d}
-                        acessos = {nomes[i]: d['acessos'] for i, d in enumerate(dados) if 'acessos' in d}
-                        tempo_uso = {nomes[i]: d['tempo_uso'] for i, d in enumerate(dados) if 'tempo_uso' in d}
+
+                        idades = {}
+                        acessos = {}
+                        tempo_uso = {}
+
+                        for i, d in enumerate(dados):
+                            nome = f"Usuário {i+1}"
+                            if 'idade' in d:
+                                idades[nome] = d['idade']
+                            if 'acessos' in d:
+                                acessos[nome] = d['acessos']
+                            if 'tempo_uso' in d:
+                                tempo_uso[nome] = d['tempo_uso']
+
                         exibir_grafico(idades, "Idades dos Usuários")
                         exibir_grafico(acessos, "Número de Acessos")
                         exibir_grafico_tempo(tempo_uso, "Tempo Médio de Uso")
