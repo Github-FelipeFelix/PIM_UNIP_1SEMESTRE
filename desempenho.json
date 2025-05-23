@@ -16,5 +16,23 @@
         "curso": "Seguran\u00e7a Digital",
         "acertos": 3,
         "data": "2025-05-16 18:38:58"
+    },
+    {
+        "usuario": "ffelix",
+        "curso": "L\u00f3gica Computacional",
+        "acertos": 1,
+        "data": "2025-05-22 02:41:37"
+    },
+    {
+        "usuario": "daeherrera",
+        "curso": "Python",
+        "acertos": 1,
+        "data": "2025-05-22 15:59:53"
+    },
+    {
+        "usuario": "ademir",
+        "curso": "L\u00f3gica Computacional",
+        "acertos": 3,
+        "data": "2025-05-23 18:21:07"
     }
 ]

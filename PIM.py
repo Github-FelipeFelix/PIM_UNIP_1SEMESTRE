@@ -1,5 +1,4 @@
 # Projeto PIM - 1º Semestre de ADS - UNIP
-# Desenvolvido por: Felipe Felix
 # Sistema de cadastro e análise de usuários com segurança e estatísticas
 
 import json
@@ -247,17 +246,38 @@ def exibir_cursos():
         escolha = input("Escolha um curso: ")
 
         if escolha == '1':
-            curso_logica()
+            resultado = mostrar_conteudo("Pensamento Lógico Computacional")
+            if resultado == "continuar":
+                curso_logica(usuario)
+            elif resultado == "voltar":
+                continue
+
         elif escolha == '2':
-            curso_python()
+            resultado = mostrar_conteudo("Programação em Python")
+            if resultado == "continuar":
+                curso_python(usuario)
+            elif resultado == "voltar":
+                continue
+
         elif escolha == '3':
-            curso_seguranca()
+            resultado = mostrar_conteudo("Segurança Digital")
+            if resultado == "continuar":
+                curso_seguranca(usuario)
+            elif resultado == "voltar":
+                continue
+
         elif escolha == '0':
             break
         else:
             print("Opção inválida.")
+
+textos_intro = {
+    "Pensamento Lógico Computacional": "Pensamento Lógico Computacional é a habilidade de resolver problemas de forma estruturada e eficiente. Ele envolve a compreensão e aplicação de conceitos como algoritmos, estruturas de controle (como loops e condicionais) e decomposição de problemas complexos em partes menores e mais gerenciáveis. Essa habilidade é fundamental para o desenvolvimento de sistemas e programas de computador, pois permite que os desenvolvedores criem soluções eficazes e otimizadas para diversos tipos de problemas. No curso de Pensamento Lógico Computacional, os alunos aprenderão a identificar e definir problemas, desenvolver algoritmos para solucioná-los e implementar esses algoritmos em código. Além disso, serão abordados conceitos como variáveis, operadores, estruturas de repetição e condicionais, que são essenciais para a criação de programas funcionais. Ao final do curso, os alunos estarão aptos a aplicar o pensamento lógico computacional em diversas áreas da tecnologia da informação, contribuindo para a inovação e eficiência no desenvolvimento de soluções tecnológicas.",
+    "Programação em Python": "Programação em Python é uma introdução à linguagem de programação Python, que é conhecida por sua simplicidade e versatilidade. Python é amplamente utilizado em diversas áreas, desde desenvolvimento web até ciência de dados e inteligência artificial. A linguagem possui uma sintaxe clara e concisa, o que facilita o aprendizado e a aplicação prática dos conceitos de programação. No curso de Programação em Python, os alunos aprenderão a escrever e executar programas em Python, utilizando comandos básicos como print e input, e estruturas de controle como loops e condicionais. Além disso, serão abordados conceitos como tipos de dados, variáveis, funções e bibliotecas, que são essenciais para o desenvolvimento de programas mais complexos. Ao final do curso, os alunos estarão aptos a criar programas funcionais e eficientes, aplicando os conhecimentos adquiridos em projetos reais.",
+    "Segurança Digital": "Segurança Digital envolve práticas e medidas para proteger sistemas, redes e dados contra-ataques, danos ou acesso não autorizado. É essencial para garantir a integridade, confidencialidade e disponibilidade das informações. Com o aumento da dependência da tecnologia, a segurança digital tornou-se uma preocupação fundamental para indivíduos e organizações. No curso de Segurança Digital, os alunos aprenderão sobre as principais ameaças à segurança digital, como malware, phishing e ataques de força bruta, e as melhores práticas para proteger-se contra essas ameaças. Serão abordados conceitos como criptografia, autenticação, controle de acesso e backup de dados, que são essenciais para garantir a segurança das informações. Ao final do curso, os alunos estarão aptos a implementar medidas de segurança eficazes em seus sistemas e redes, contribuindo para a proteção das informações e a prevenção de ataques."
+}
             
-def curso_logica():
+def curso_logica(usuario):
     print("\n--- Pensamento Lógico Computacional ---")
     acertos = 0
 
@@ -280,7 +300,7 @@ def curso_logica():
     salvar_desempenho(usuario, "Lógica Computacional", acertos)
 
 
-def curso_python():
+def curso_python(usuario):
     print("\n--- Programação em Python ---")
     acertos = 0
 
@@ -303,7 +323,7 @@ def curso_python():
     salvar_desempenho(usuario, "Python", acertos)
 
 
-def curso_seguranca():
+def curso_seguranca(usuario):
     print("\n--- Segurança Digital ---")
     acertos = 0
 
@@ -325,6 +345,25 @@ def curso_seguranca():
     print(f"\nVocê acertou {acertos} de 3 perguntas.")
     salvar_desempenho(usuario, "Segurança Digital", acertos)
 
+def mostrar_conteudo(curso):
+    while True:
+        print(f"\nVocê escolheu o curso: {curso}")
+        print("O que deseja fazer?")
+        print("1. Ler o conteúdo do curso")
+        print("2. Voltar ao menu principal")
+        print("3. Ir direto para as perguntas")
+
+        escolha = input("Digite sua opção (1-3): ")
+
+        if escolha == "1":
+            print("\n--- Conteúdo ---")
+            print(textos_intro.get(curso, "Conteúdo não disponível."))
+        elif escolha == "2":
+            return "voltar"
+        elif escolha == "3":
+            return "continuar"
+        else:
+            print("Opção inválida. Tente novamente.")
 
 def main():
     while True:
